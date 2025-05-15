@@ -1,7 +1,5 @@
 package com.example.expense.service;
 
-import java.util.List;
-
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -24,11 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepository.findByEmail(email)
             .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-        return new org.springframework.security.core.userdetails.User(
-            user.getEmail(),
-            user.getPassword(),
-            List.of() // или роли, если добавишь
-        );
+        return user;
     }
 }
 
