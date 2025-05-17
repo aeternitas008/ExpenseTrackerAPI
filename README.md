@@ -34,5 +34,7 @@ Authorization: Bearer <your_token>
 
 ## 🛠️ Сборка и запуск
 
+Изначально необходимо создать базу данных и пользователя для неё, и указать свои данные для подключения в application.properties.
+
 ```bash
 ./mvnw spring-boot:run
