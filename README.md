@@ -49,7 +49,7 @@ Authorization: Bearer <your_token>
 2. **Соберите проект:**
 
     ```bash
-    ./mvnw clean package -DskipTests
+    ./mvnw clean package
     ```
 
 3. **Запустите приложение:**
