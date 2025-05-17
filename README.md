@@ -34,7 +34,34 @@ Authorization: Bearer <your_token>
 
 ## 🛠️ Сборка и запуск
 
-Изначально необходимо создать базу данных и пользователя для неё, и указать свои данные для подключения в application.properties.
+1. **Создайте базу данных и пользователя в PostgreSQL**, затем укажите свои данные подключения в файле `src/main/resources/application.properties`:
 
-```bash
-./mvnw spring-boot:run
+    ```properties
+    spring.datasource.url=jdbc:postgresql://localhost:5432/expense_db
+    spring.datasource.username=ваш_пользователь
+    spring.datasource.password=ваш_пароль
+
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.properties.hibernate.format_sql=true
+    ```
+
+2. **Соберите проект:**
+
+    ```bash
+    ./mvnw clean package -DskipTests
+    ```
+
+3. **Запустите приложение:**
+
+    ```bash
+    java -jar target/expense-0.0.1-SNAPSHOT.jar
+    ```
+
+    > 💡 *Альтернатива для запуска напрямую из исходников во время разработки:*
+
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+
+---
