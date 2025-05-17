@@ -18,6 +18,9 @@ import com.example.expense.model.Expense;
 import com.example.expense.model.User;
 import com.example.expense.service.ExpenseService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
+@SecurityRequirement(name = "bearerAuth")
 @RestController
 @RequestMapping("/api/expenses")
 public class ExpenseController {
