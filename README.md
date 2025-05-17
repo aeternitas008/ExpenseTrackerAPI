@@ -55,7 +55,7 @@ Authorization: Bearer <your_token>
 3. **Запустите приложение:**
 
     ```bash
-    java -jar target/expense-0.0.1-SNAPSHOT.jar
+    java -jar target/expense-1.jar
     ```
 
     > 💡 *Альтернатива для запуска напрямую из исходников во время разработки:*
@@ -63,5 +63,9 @@ Authorization: Bearer <your_token>
     ```bash
     ./mvnw spring-boot:run
     ```
+
+4. **И переход на страницу swagger-ui**
+
+👉 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
 ---
